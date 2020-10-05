@@ -1,0 +1,22 @@
+mix phoenix.gen.json Food RecipeIngredient recipe_ingredients recipe_id:references:recipes ingredient_id:references:ingredients measurement_unit_id:references:measurement_units quantity:float
+
+mix phx.gen.json Food Recipe recipes servings:integer cousine:string user_id:references:users title:string author:string original_url:string preperation_time_upper_limit:integer preperation_time_lower_limit:integer cooking_time_upper_limit:integer cooking_time_lower_limit:integer description:string image_url:string
+
+mix phx.gen.json Food Step steps recipe_id: references:recipes url: string title: string description: text
+
+mix phx.gen.json Food Ingredient ingredients url:string name:string description:text 
+
+mix phx.gen.json Food MeasurementUnit measurement_units url:string name:string
+
+
+mix phoenix.gen.json Plans Meal meals recipe_id:references:recipes daily_meal_plan_id:references:daily_meal_plans meal_title:string meal_note:string
+
+mix phoenix.gen.json Plans DailyMealPlan daily_meal_plans meal_plan:references:meal_plans daily_meal_plan_title:string meal_note:string increasing_number: integer
+
+mix phoenix.gen.json Plans MealPlan meal_plans title:string description:string user_id:references:users
+
+
+
+
+
+
